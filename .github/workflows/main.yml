@@ -32,13 +32,69 @@ jobs:
     needs: [build-image]
     name: Compile all svg icons to keycaps
     steps:
-      - name: Run the build process with Docker
-        uses: addnab/docker-run-action@v3
-        with:
-            image: ghcr.io/niwla23/iconcaps:latest
-            options: -v ${{ github.workspace }}/keycaps:/usr/src/app/target
+      - name: Run generating container
+        run: |
+          docker run --rm -v ${PWD}/output:/usr/src/app/target ghcr.io/niwla23/iconcaps:latest
 
-      - uses: actions/upload-artifact@v3
+      - name: Archive output files
+        run: |
+          zip -r icon_keycaps.zip output
+
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: keycaps
-          path: keycaps
+          tag_name: ${{ github.sha }}
+          release_name: ${{ github.sha }}
+          body: |
+            Release created from commit ${github.sha}
+          draft: false
+          prerelease: false
+
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./icon_keycaps.zip
+          asset_name: icon_keycaps.zip
+
+      # - name: Run the build process with Docker
+      #   uses: addnab/docker-run-action@v3
+      #   with:
+      #       image: ghcr.io/niwla23/iconcaps:latest
+      #       options: -v ${{ github.workspace }}/keycaps:/usr/src/app/target
+
+      # - uses: montudor/action-zip@v1
+      #   with:
+      #     args: zip -qq -r keycaps.zip ./keycaps
+
+      # - name: release
+      #   uses: actions/create-release@v1
+      #   id: create_release
+      #   with:
+      #     draft: false
+      #     prerelease: false
+      #     release_name: ${{ github.head_ref }}.${{ github.sha }}
+      #     tag_name: ${{ github.ref }}
+      #     body_path: Auto-generated release
+      #   env:
+      #     GITHUB_TOKEN: ${{ github.token }
+
+      # - name: upload linux artifact
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ github.token }}
+      #   with:
+      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+      #     asset_path: ./bin/azblogfilter.linux-amd64.tar.gz
+      #     asset_name: icon_keycaps.tar.gz
+      #     asset_content_type: application/gzip
+
+      # - uses: actions/upload-artifact@v3
+      #   with:
+      #     name: keycaps
+      #     path: keycaps
