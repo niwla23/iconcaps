@@ -25,6 +25,8 @@ jobs:
           context: .
           file: Dockerfile
           push: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           tags: ghcr.io/niwla23/iconcaps:latest
 
   compile_icons:
@@ -46,8 +48,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.sha }}
-          release_name: ${{ github.sha }}
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}-${{ github.sha }}
           body: |
             Release created from commit ${github.sha}
           draft: false
