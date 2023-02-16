@@ -52,7 +52,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}-${{ github.sha }}
+          release_name: ${{ github.head_ref || github.ref_name }}-${{ github.sha }}
           body: |
             Release created from commit ${{ github.sha }}
           draft: false

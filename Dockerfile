@@ -7,8 +7,10 @@ RUN pip install poetry
 RUN poetry config virtualenvs.create false
 RUN poetry install
 
-COPY . /usr/src/app
 RUN apt-get update && \
   apt-get install -y libsm6 libxrender1 libxrender-dev libxxf86vm-dev xorg libxkbcommon-x11-0 libx11-dev libxxf86vm-dev libxcursor-dev \ 
   libxi-dev libxrandr-dev libxinerama-dev libegl-dev libgomp1
+
+COPY . /usr/src/app
+
 CMD ["python", "-u", "main.py"]
