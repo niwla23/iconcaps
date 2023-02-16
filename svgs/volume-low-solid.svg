@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 448 512"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="volume-low-solid.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8">
+    <marker
+       style="overflow:visible"
+       id="DotM"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DotM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(7.4, 1)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         id="path1475" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="SquareS"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="SquareS"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.2)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M -5.0,-5.0 L -5.0,5.0 L 5.0,5.0 L 5.0,-5.0 L -5.0,-5.0 z "
+         id="path1487" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1411" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="0.59731188"
+     inkscape:cx="-114.68046"
+     inkscape:cy="132.25921"
+     inkscape:window-width="1920"
+     inkscape:window-height="1047"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path
+     d="m 380.63904,156.71847 c -8.44013,-6.85063 -20.86224,-5.64455 -27.70959,2.79641 -6.90153,8.4155 -5.66999,20.8294 2.77096,27.73421 9.25706,7.64703 14.59372,18.64876 14.59372,30.30731 0,11.65034 -5.33666,22.67671 -14.62245,30.27119 -8.44014,6.90153 -9.67167,19.31871 -2.77096,27.73421 3.87441,4.7718 9.54031,7.23487 15.23822,7.23487 4.38756,0 8.82602,-1.46224 12.47137,-4.43846 18.50179,-15.15283 29.09301,-37.2384 29.09301,-60.80181 0,-23.56341 -10.59122,-45.64897 -29.06428,-60.83793 z M 289.17688,35.978562 C 279.7351,31.719906 268.64305,33.420249 260.909,40.296331 L 150.09528,138.73802 H 81.293413 c -21.765367,0 -39.409189,17.64383 -39.409189,38.67027 v 78.07946 c 0,21.76536 17.643822,38.67026 39.409189,38.67026 h 68.834717 l 110.75624,98.44087 c 4.89331,6.5682 11.13309,8.86707 17.45498,8.86707 3.64371,0 7.35557,-0.76462 10.80469,-2.32925 9.47463,-4.23895 15.46811,-13.59863 15.46811,-23.94354 V 59.919644 c 0,-10.336702 -5.99348,-20.443517 -15.43527,-23.941082 z"
+     id="path2"
+     style="stroke-width:0.821025" />
+  <rect
+     style="fill:#000000;stroke:#000000;stroke-width:18.0625;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+     id="rect1907"
+     width="209.64062"
+     height="36.285393"
+     x="117.0443"
+     y="426.69537" />
+</svg>

@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "keycapscript1"
+version = "0.1.0"
+description = ""
+authors = ["niwla23 <46248939+niwla23@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.*"
+bpy = "^3.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
