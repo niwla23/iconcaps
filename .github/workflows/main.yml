@@ -54,7 +54,7 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}-${{ github.sha }}
           body: |
-            Release created from commit ${github.sha}
+            Release created from commit ${{ github.sha }}
           draft: false
           prerelease: false
 
